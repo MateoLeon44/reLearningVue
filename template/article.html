@@ -7,24 +7,6 @@
     <!-- STYLES -->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
-    <script type="text/javascript">
-        window.addEventListener("load", function(event)
-        {
-        var template = document.getElementById("article-template")
-        
-
-        var articles = document.getElementById("articles");
-        
-        for(var i = 1; i <= 5; i++)
-        {
-            var clone = template.cloneNode(true);
-            clone.removeAttribute("id");
-            articles.appendChild(clone)
-        }
-        });
-        
-    </script>
-
 </head>
 <body>
     <header id="header">
@@ -60,33 +42,30 @@
             <div class="clearfix"> </div>
         </div>
     </header>
-    <div id="slider" class="slider-big">
-        <h1>Re Learning Vue.js template</h1>
-        <a href="#" class="btn-white">Ir al blog</a>
-    </div>
+    
     
     <div class="center">
-        <section id="content">
-            <h2 class="subheader">últimos artículos</h2>
-
-            
-            <div id="articles">
-            <article class="article-item" id="article-template">
-                <div class="image-wrap">
-                    <img src="https://images.unsplash.com/photo-1496144300411-8dd31ce145ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80" alt="Article">
-                </div>
-                <h2>
-                     Título
-                </h2>
-                <span class="date">
-                        Hace 5 minutos
-                </span>
-                <a href="#">Lee mas</a>
-                <div class="clearfix"></div>
-            </article>
-            </div>
-            
-        </section>
+        
+            <section id="content">
+        
+                    
+                    <div id="articles">
+                    <article class="article-item" id="article-template">
+                        <div class="image-wrap">
+                            <img src="https://images.unsplash.com/photo-1496144300411-8dd31ce145ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80" alt="Article">
+                        </div>
+                        <h2>
+                             Título
+                        </h2>
+                        <span class="date">
+                                Hace 5 minutos
+                        </span>
+                        <a href="#">Lee mas</a>
+                        <div class="clearfix"></div>
+                    </article>
+                    </div>
+                    
+                </section>
 
         <aside id="sidebar">
             <div id="nav-blog" class="sidebar-item">
