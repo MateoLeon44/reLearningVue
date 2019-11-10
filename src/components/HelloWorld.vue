@@ -2,12 +2,18 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>{{texto}}</h2>
+    <newComponent></newComponent>
   </div>
 </template>
 
 <script>
+import newComponent from './newComponent.vue'
+
 export default {
   name: 'HelloWorld',
+  components:{
+    newComponent
+  },
   props: {
     msg: String
   },

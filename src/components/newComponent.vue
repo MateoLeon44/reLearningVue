@@ -1,5 +1,9 @@
 <template>
+<div>
+<hr/>
   <h1>{{oneH3}}</h1>
+<hr/>
+</div>
 </template>
 
 <script>
