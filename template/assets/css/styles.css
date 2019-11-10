@@ -1,69 +1,83 @@
-body{
-    text-align:center;
-    margin:  0px;
+body {
+    text-align: center;
+    margin: 0px;
     padding: 0px;
+
+    /*FUENTES*/
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing:antialiased;
-
+    -moz-osx-font-smoothing: antialiased;
 }
 
-#header{
-    height: 120px; 
+#header {
+    height: 120px;
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
-    border-top: 3px solid #42b883;
+    border-top: 5px solid #09a330;
 }
 
-#logo{
+.center{
+    width: 75%;
+    margin: 0px auto;
+}
+
+.clearfix{
+    clear:both;
+    float:none;
+}
+
+#logo {
     width: 30%;
     font-size: 30px;
     float: left;
     margin-top: 35px;
 }
 
-#logo img{
+#logo img {
     display: block;
     float: left;
     height: 60px;
-    margin-top: -10px;
-    animation: girar infinite 30s linear;
+    margin-top: -9px;
     margin-right: 10px;
+    animation: latir infinite 5s linear;
 }
 
-@keyframes girar{
-    from{
-        transform: rotate(0deg);
+@keyframes latir {
+    0% {
+        transform: scale(1, 1);
     }
-    to{
-        transform: rotate(360deg);
+
+    50% {
+        transform: scale(1.02, 1.02);
+    }
+
+    55%{
+        transform: scale(0.95, 0.95);
+    }
+
+    100% {
+        transform: scale(1, 1);
     }
 }
 
-#brand{
-    display:block;
+#brand {
+    display: block;
     margin: 0px;
     float: left;
 }
 
-.center
-{
-    width:75%;
-    margin: 0px auto;
-}
-
 #menu{
     width: 70%;
-    float: right;
+    float:right;
     font-size: 18px;
 }
 
 #menu ul{
     line-height: 85px;
     width: 60%;
-    float: right;
+    float:right;
 }
 
 #menu ul li{
@@ -80,37 +94,35 @@ body{
     transition: 300ms all;
 }
 
+
 #menu a:hover{
-    color:#42b883;
-}
-
-
-
-.clearfix{
-    clear:both;
-    float:none;
+    color: #42b883;
 }
 
 #slider{
-    background: rgb(66,184,131);
-    background: radial-gradient(circle, rgba(66,184,131,1) 0%, rgba(53,73,94,1) 100%);
     width: 100%;
     height: 350px;
-    color:white;
+    /*line-height: 320px;*/
+    color: white;
     text-shadow: 0px 0px 5px #444;
+
+    /*DEGRADADO CSS*/   
+    background: rgb(66,184,131);
+    background: radial-gradient(circle, rgba(66,184,131,1) 0%, rgba(53,73,94,1) 100%);
+
 }
 
 #slider h1{
     margin-top: 0.2px;
-    padding:0px;
-    padding-top: 133px;
+    padding: 0px;
+    padding-top: 130px;
     text-align: center;
 }
 
 .btn-white{
     display: block;
     background: white;
-    color: rgb(106, 105, 105);
+    color:rgb(88, 88, 88);
     padding: 10px;
     width: 100px;
     height: 35px;
@@ -120,7 +132,7 @@ body{
     text-shadow: none;
     text-decoration: none;
     line-height: 35px;
-    box-shadow: 0px 0px 5px #444;
+    box-shadow: 0px 0px 5px rgb(88, 88, 88);
     margin-top: 40px;
     border-radius: 4px;
     transition: 300ms all;
@@ -128,11 +140,10 @@ body{
 
 .btn-white:hover{
     background: #444;
-    color: white;
+    color:white;
 }
 
-#slider.slider-small
-{
+#slider.slider-small{
     height: 150px;
 }
 
@@ -144,91 +155,118 @@ body{
 
 #content{
     width: 70%;
-    float: left;
-    min-height: 1450px;
+    float:left;
+    min-height: 650px;
     margin-right: 20px;
 }
 
 #sidebar{
     width: 25%;
-    float: left;
+    float:left;
 }
 
 .sidebar-item{
     background: #f7f7f7;
-    padding: 15px;
+    padding: 20px;
     margin-top: 30px;
 }
 
 .sidebar-item h3{
     text-transform: uppercase;
-    font-size: 20px;
-    margin: 0px;
-    border-bottom: 3px solid #eee;
+    font-size: 18px;
+    margin:0px;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    border-bottom: 3px solid #eee;
+}
+
+.sidebar-item .btn{
+    margin: 0px auto;
+    margin-top: 10px;
 }
 
 .btn{
-    display: block;
-    background: black;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    text-decoration: none;
-    max-width: 120px;
-    transition: 300ms all;
-    border-radius: 4px;
-    margin: 0px auto;
-    border:none;
-    cursor: pointer;
-}
-
-.sidebar-item-item .btn{
-    margin-top: 10px;
-    
+   display: block;
+   background: black;
+   color: white;
+   padding: 15px; 
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 14px;
+   text-decoration: none;
+   max-width: 120px;
+   transition: 300ms all;
+   border: none;
+   cursor:pointer;
 }
 
 .btn-success{
     background: #42b883;
-    
+    border-radius: 4px;
 }
 
 .btn-success:hover{
-    background: #35495e;
+    background:#35495e;
 }
 
-input[type="text"]{
+.mid-form{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.mid-form label{
+    display: block;
+    float:left;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+input[type="text"],
+textarea{
     width: 100%;
-    height: 30px;
-    border:1px solid #eee;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    padding:3px;
+    min-height: 30px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin-bottom: 5px;
     transition: 300ms all;
+    border-radius: 4px;
 }
 
-input[type="text"]:focus{
-    border-radius: 4px;
+input[type="text"]:focus,
+textarea:focus{
     box-shadow: 0px 0px 5px #35495e inset;
 }
 
+textarea{
+    width: 100%;
+    height: 150px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.radibuttons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float:left;
+}
+
+
 #footer{
-    background: #35495e;
+    background: #f7f7f7;
     width: 100%;
     height: 70px;
-    line-height: 65px;
+    line-height: 70px;
     color: #444;
 }
 
-#footer p{
-    color: white;
+#footer p {
     margin: 0px;
     padding: 0px;
 }
-
 
 .article-item{
     width: 100%;
@@ -238,11 +276,11 @@ input[type="text"]:focus{
     text-align: left;
 }
 
-.article-item .image-wrap{
+.article-item .image-wrap {
     width: 130px;
     height: 130px;
-    overflow: hidden;
-    float: left;
+    overflow:hidden;
+    float:left;
     margin-right: 15px;
     border: 1px solid #ccc;
 }
@@ -254,7 +292,7 @@ input[type="text"]:focus{
 
 .article-item h2{
     display: block;
-    width: 100%;
+    width:100%;
     padding: 0px;
     margin: 0px;
     margin-bottom: 7px;
@@ -263,23 +301,148 @@ input[type="text"]:focus{
 .article-item .date{
     display: block;
     width: 100%;
-    color: rgb(113, 113, 113);
+    color: rgb(122, 122, 122);
 }
 
 .article-item a{
     display: block;
-    color:#444;
+    color: #444;
     text-decoration: none;
     margin-top: 10px;
 }
 
 .article-item a:hover{
     text-decoration: underline;
-
 }
 
 .subheader{
     font-size: 38px;
     border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+.article-detail .image-wrap{
+    float:none;
+    width:100%;
+    height: 300px;
+}
+
+.article-detail .image-wrap img{
+    width: 100%;
+    height: auto;
+}
+
+.article-detail .subheader{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border:none;
+}
+
+/*RESPONSIVE*/
+
+/*Desde la anchura 963px hasta la anchura 1488px de pantalla*/
+@media (max-width: 1488px){
+    /*Se ejecutarán estos estilos*/
+    .center{
+        width: 85%;
+    }
+}
+
+/*Desde la anchura 0px hasta la anchura 963px de pantalla*/
+@media (max-width: 1314px){
+    .center{
+        width: 95%;
+    }
+
+    #menu ul{
+        width: auto;
+    }
+}
+
+@media (max-width: 881px){
+    #logo{
+        width: 265px;
+    }
+
+    #menu{
+        width: auto;
+    }
+}
+
+@media (max-width: 813px){
+    #logo{
+        float:none;
+        /*width: 240px;*/
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    #menu,
+    #menu ul{
+       clear:both;
+       float:none;
+       width: 100%;
+       margin: 0px;
+       padding: 0px;
+       line-height: 43px;
+    }
+
+    #content{
+        float:none;
+        width: 100%;
+    }
+
+    #sidebar{
+        float:none;
+        width: 60%;
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+
+    #slider h1{
+        padding-top: 115px;
+        font-size: 25px;
+    }
+
+    .mid-form{
+        width: 70%;
+    }
+}
+
+@media (max-width: 497px){
+    #header{
+        min-height: 130px;
+        overflow:hidden;
+    }
+
+    #menu,
+    #menu ul{
+        line-height: 50px;
+    }
+
+    #menu ul li{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    #slider{
+        height: 180px;
+    }
+
+    #slider h1{
+        font-size: 19px;
+        padding-top: 30px;
+    }
+
+    #slider .btn-white{
+        margin-top: 20px;
+    }
+
+    #slider.slider-small{
+        height: 100px;
+    }
+
+    #slider.slider-small h1{
+       padding-top: 35px;
+    }
 }

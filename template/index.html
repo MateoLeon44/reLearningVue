@@ -2,10 +2,29 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <title>Maquetación para el Master en Frameworks JavaScript</title>
+        <title>VuePage</title>
 
         <!--HOJA DE ESTILOS-->
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
+        <script type="text/javascript">
+            window.addEventListener("load", function(){
+                var template = document.getElementById("article-template");
+                var articles = document.getElementById("articles");
+
+                for(var i = 1; i <= 5; i++){
+                    var clonado = template.cloneNode(true);
+                    clonado.removeAttribute("id");
+
+                    var h2 = clonado.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + ' ' + i;
+
+                    articles.appendChild(clonado);
+                }
+
+            });
+        </script>
+
 
     </head>
     <body>
@@ -15,7 +34,7 @@
                 <div id="logo">
                     <img src="assets/images/vue.png" class="app-logo" alt="Logotipo" />
                     <span id="brand">
-                        <strong>Curso</strong>Vue
+                        <strong>Re</strong>Vue
                     </span>
                 </div>
                 
@@ -45,30 +64,35 @@
             </div>
         </header>
 
+        <div id="slider" class="slider-big">
+            <h1>Re learning Vue.js</h1>
+            <a href="#" class="btn-white">Ir al blog</a>
+        </div>
+
         <div class="center">
             <section id="content">
-
-                    <article class="article-item article-detail">
+                <h2 class="subheader">Últimos artículos</h2>
+                
+                
+                <!--Listado articulos-->
+                <div id="articles">
+                    <article class="article-item" id="article-template">
                         <div class="image-wrap">
-                            <img src="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8" alt="Paisaje" />
+                            <img src="https://images.unsplash.com/photo-1496144300411-8dd31ce145ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1072&q=80" alt="Paisaje" />
                         </div>
     
-                        <h1 class="subheader">Articulo de prueba</h1>
+                        <h2>Articulo de prueba</h2>
                         <span class="date">
                             Hace 5 minutos
                         </span>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet consectetur dui. Vestibulum ac convallis urna, vitae porta massa. Mauris sit amet nisi in metus tempor convallis. Nulla nec euismod turpis. Cras luctus lorem et nisl dapibus aliquet. Curabitur lorem nunc, tristique a felis ac, vehicula laoreet ante. Ut auctor orci turpis. Cras sit amet placerat nulla, feugiat eleifend metus. Mauris nec convallis lectus. In gravida sapien in iaculis vulputate. Aliquam a rhoncus elit, sit amet pretium nisl. Vivamus egestas facilisis viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut vel lorem est. Cras et sapien finibus, mattis est in, condimentum nisl.
-                        </p>
-                        <p>
-                            Aenean vel orci a tellus porttitor eleifend. Integer tincidunt porta fermentum. Aenean vitae enim iaculis, sollicitudin risus in, interdum justo. Donec semper metus ac nibh maximus venenatis. Cras sodales nisl metus, a placerat risus tristique ornare. Ut finibus nisi a ante tincidunt hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut eget venenatis augue, id molestie eros. Quisque leo risus, pellentesque mattis libero id, pharetra tempor turpis.
-                        </p>
-                        <p>  
-                            Donec fermentum ligula at ultrices faucibus. Proin facilisis est vitae vehicula finibus. Praesent rutrum eleifend ligula, sit amet molestie dolor interdum nec. Cras sodales odio nec diam posuere, mollis aliquam magna tempus. Fusce lobortis maximus dapibus. Curabitur aliquam vehicula ultricies. Nulla sed vulputate erat. 
-                        </p>
+                        <a href="#">Leer más</a>
 
                         <div class="clearfix"></div>
                     </article>
+
+                    <!--AÑADIR ARTICULOS VIA JS-->
+
+                </div>
                 
             </section>
 
@@ -83,7 +107,7 @@
                         <p>Encuentra el artículo que buscas</p>
                         <form>
                             <input type="text" name="search" />
-                            <input type="submit" name="submit" value="Buscar" class="btn" />
+                            <input type="submit" name="submit" value="Buscar" class="btn btn-success" />
                         </form>
                 </div>
             </aside>
